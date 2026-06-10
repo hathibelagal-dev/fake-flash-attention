@@ -1,6 +1,6 @@
 import torch
 
-__version__ = "2.7.4-fake"
+__version__ = "2.7.4.post1"
 
 # ====================== Main FA2 Functions ======================
 
