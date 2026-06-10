@@ -19,5 +19,18 @@ def test_flash_attn_shim():
     assert out.shape == q.shape
     print("✅ Shim test passed!")
 
+def test_flash_attn_windowed():
+    print("\nTesting windowed attention...")
+    q = torch.randn(1, 100, 8, 64, dtype=torch.float16, device='cpu')
+    k = torch.randn(1, 100, 8, 64, dtype=torch.float16, device='cpu')
+    v = torch.randn(1, 100, 8, 64, dtype=torch.float16, device='cpu')
+    
+    # Test with sliding window
+    out = flash_attn_func(q, k, v, causal=True, window_size=(17, 17))
+    
+    assert out.shape == q.shape
+    print("✅ Windowed attention test passed!")
+
 if __name__ == "__main__":
     test_flash_attn_shim()
+    test_flash_attn_windowed()
