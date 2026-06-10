@@ -1,9 +1,11 @@
 # fake-flash-attention ⚡️ (Fake)
 
 [![PyPI version](https://img.shields.io/pypi/v/fake-flash-attention.svg)](https://pypi.org/project/fake-flash-attention/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/fake-flash-attention.svg)](https://pypi.org/project/fake-flash-attention/)
 
 A drop-in, pure-Python shim for the `flash-attn` package. It redirects all FlashAttention calls to PyTorch's native `scaled_dot_product_attention` (SDPA).
+
+> [!TIP]
+> Successfully tested with the music generation model **Stable Audio 3**.
 
 ## Why is this necessary?
 

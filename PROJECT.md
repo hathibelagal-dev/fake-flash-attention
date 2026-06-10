@@ -12,6 +12,8 @@
 - Implemented support for `window_size` (sliding window attention) using custom attention masks in PyTorch SDPA.
 - Published the package to PyPI as `fake-flash-attention`.
 - Updated `README.md` with PyPI badges and official project links.
+- Confirmed compatibility and added note for **Stable Audio 3** in `README.md`.
+- Removed downloads badge from `README.md`.
 
 ## Next Steps
 - Consider adding more comprehensive tests for different `flash_attn` variants (e.g., varlen).
