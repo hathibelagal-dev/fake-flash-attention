@@ -19,7 +19,12 @@ Modern Large Language Models (LLMs) and popular libraries (like Hugging Face Tra
 ## Installation
 
 ```bash
-pip install -e .
+pip install fake-flash-attention
+```
+
+*Note: If installing from source:*
+```bash
+pip install .
 ```
 
 ## Usage

@@ -15,7 +15,12 @@ The package mocks the `flash_attn` namespace. Key functions like `flash_attn_fun
 # Building and Running
 
 ## Installation
-To install the package in editable mode:
+To install from PyPI:
+```bash
+pip install fake-flash-attention
+```
+
+To install in editable mode from source:
 ```bash
 pip install -e .
 ```
