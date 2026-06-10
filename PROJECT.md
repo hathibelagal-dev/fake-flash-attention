@@ -10,6 +10,8 @@
 - Fixed `RuntimeError` in `flash_attn_func` caused by tensor layout mismatch. `flash-attn` uses `(batch, seqlen, nheads, head_dim)` while PyTorch SDPA expects `(batch, nheads, seqlen, head_dim)`. Added transposition logic to handle this.
 - Improved shim robustness by ensuring tensor contiguity and adding warnings for unsupported features.
 - Implemented support for `window_size` (sliding window attention) using custom attention masks in PyTorch SDPA.
+- Published the package to PyPI as `fake-flash-attention`.
+- Updated `README.md` with PyPI badges and official project links.
 
 ## Next Steps
 - Consider adding more comprehensive tests for different `flash_attn` variants (e.g., varlen).
