@@ -9,10 +9,19 @@ def flash_attn_func(q, k, v, dropout_p=0., softmax_scale=None, causal=False,
     if softmax_scale is None:
         softmax_scale = q.shape[-1] ** -0.5
 
-    return torch.nn.functional.scaled_dot_product_attention(
+    # flash-attn expects (batch, seqlen, nheads, head_dim)
+    # torch SDPA expects (batch, nheads, seqlen, head_dim)
+    q = q.transpose(1, 2)
+    k = k.transpose(1, 2)
+    v = v.transpose(1, 2)
+
+    out = torch.nn.functional.scaled_dot_product_attention(
         q, k, v, attn_mask=None, dropout_p=dropout_p,
         is_causal=causal, scale=softmax_scale
     )
+
+    # Transpose back to (batch, seqlen, nheads, head_dim)
+    return out.transpose(1, 2)
 
 
 # FA2 common aliases
