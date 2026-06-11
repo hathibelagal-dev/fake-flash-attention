@@ -1,4 +1,4 @@
-# fake-flash-attention ⚡️ (Fake)
+# fake-flash-attention ⚡️
 
 [![PyPI version](https://img.shields.io/pypi/v/fake-flash-attention.svg)](https://pypi.org/project/fake-flash-attention/)
 
