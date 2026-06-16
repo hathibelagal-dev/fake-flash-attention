@@ -14,6 +14,7 @@
 - Updated `README.md` with PyPI badges and official project links.
 - Confirmed compatibility and added note for **Stable Audio 3** in `README.md`.
 - Removed downloads badge from `README.md`.
+- Added a comprehensive `.gitignore` file to ignore Python caches, build artifacts, OS metadata, and IDE configurations.
 
 ## Next Steps
 - Consider adding more comprehensive tests for different `flash_attn` variants (e.g., varlen).
